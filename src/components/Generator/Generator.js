@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import NextButton from "../NextButton/NextButton";
-import PrevButton from "../PrevButton/PrevButton";
-import ButtonSet from "../ButtonSet/ButtonSet";
-import Quote from "../Quote/Quote";
+import {NextButton, PrevButton, ButtonSet, Quote} from "../../components";
 import "./Generator.css";
 
 function Generator() {
