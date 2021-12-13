@@ -13,9 +13,9 @@ function PrevButton(props) {
     const showPrevious = () => {
         props.setPrevious(true);
     }
-    
+
     return (
-        <button onClick={showPrevious} disabled={disabled}>Go to the previous quote</button>
+        <button className="PrevButton button" onClick={showPrevious} disabled={disabled}>Go to the previous quote</button>
     )
 }
 

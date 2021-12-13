@@ -5,7 +5,7 @@ function NextButton(props) {
     }
     
     return (
-        <button onClick={generateNew}>Get a new quote</button>
+        <button className="NextButton button" onClick={generateNew}>Get a new quote</button>
     )
 }
 

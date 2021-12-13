@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-import NextButton from "./NextButton";
-import PrevButton from "./PrevButton";
-import Quote from "./Quote";
+import NextButton from "../NextButton/NextButton";
+import PrevButton from "../PrevButton/PrevButton";
+import ButtonSet from "../ButtonSet/ButtonSet";
+import Quote from "../Quote/Quote";
+import "./Generator.css";
 
 function Generator() {
 
@@ -13,7 +15,7 @@ function Generator() {
     useEffect(() => {
 
         if (previous) {
-            setHistory(history.filter((el, i) => i != history.length - 1));
+            setHistory(history.filter((el, i) => i !== history.length - 1));
             setPrevious(false)
         }
 
@@ -30,12 +32,14 @@ function Generator() {
                 .catch(error => console.log(error))
         }
     }, [next, previous]);
-    
+
     return (
-        <div>
+        <div className="Generator">
             {(history.length > 0) && <Quote author={history[history.length - 1].author} quote={history[history.length - 1].quote} />}
-            <PrevButton setPrevious={setPrevious} historyLength={history.length} />
-            <NextButton setNext={setNext} />
+            <ButtonSet>
+                <PrevButton setPrevious={setPrevious} historyLength={history.length} />
+                <NextButton setNext={setNext} />
+            </ButtonSet>
         </div>
     )
 }

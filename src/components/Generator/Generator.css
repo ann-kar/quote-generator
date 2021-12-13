@@ -1,0 +1,14 @@
+.Generator {
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    max-width: 1000px;
+}
+
+.Generator > * {
+    width: 100%;
+}

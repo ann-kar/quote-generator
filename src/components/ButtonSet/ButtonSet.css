@@ -1,0 +1,22 @@
+.ButtonSet {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 20%;
+}
+
+.ButtonSet > * {
+    font-size: 1.1rem;
+    height: 3rem;
+    width: 15rem;
+    margin: 0.5rem 1rem;
+    padding: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.8)
+}
+
+@media screen and (width < 400px) {
+    .ButtonSet > * {
+        width: 80%;
+    }
+}

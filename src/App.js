@@ -1,5 +1,5 @@
 import './App.css';
-import Generator from "./components/Generator";
+import Generator from "./components/Generator/Generator";
 
 function App() {
   return (
